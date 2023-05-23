@@ -20,7 +20,7 @@ def get_trainer(model, tokenizer, CFG, train_dataset, eval_dataset):
             predict_with_generate = True,
             label_smoothing_factor = CFG.label_smoothing_factor,
             optim = "adamw_torch",
-            lr_scheduler_type = "linear",
+            lr_scheduler_type = "cosine",
             logging_strategy = CFG.logging_strategy,
             warmup_ratio = CFG.warmup_ratio,
             ),
